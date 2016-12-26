@@ -1,0 +1,811 @@
+ @font-face
+ {
+    font-family: Quicksand;
+ }
+
+
+body
+ {
+    width: 100%;
+    background-color: #d4d9df;
+    padding-top: 0;
+    margin: 4px;
+
+
+ }
+
+/* HEADER SECTION*/
+
+ header
+ {
+     width: 83%;
+     height: 750px;
+     background: url("../img/background.jpg") no-repeat center;
+     background-size: cover;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 0;
+
+ }
+
+
+ .main-header p
+ {
+     font-family: Quicksand;
+     text-align: center;
+     font-size: 22px;
+     color: #ebebeb;
+ }
+
+ .main-header h1
+ { font-family: Quicksand;
+    font-size: 60px;
+    color: white;
+    margin-top: 20%;
+    margin-bottom: auto;
+    text-align: center;
+ }
+ul{
+    float: right;
+    margin-top: 0%;
+}
+li{
+cursor: pointer;
+    display:inline-block;
+    margin-left: 25px;
+    margin-top: 33px;
+    margin-right: 25px;
+    color: white;
+    font-size: 20px;
+    font-family: Quicksand;
+    font-weight: 900;
+}
+
+  #logo{
+    margin-top: 29px;
+    margin-left: 50px;
+
+
+}
+  .shop-cart{
+      cursor: pointer;
+      float: right;
+      margin-right: 60px;
+      margin-left: 25px;
+      margin-top:35px
+  }
+
+  #down{
+      display: block;
+      margin-top: 200px;
+      margin-left: 48%;
+
+      transition: 1.2s;
+  }
+
+  /*FORM SECTION*/
+
+ /*CHECKBOX*/
+
+ .checkbox
+ {
+     position: relative;
+     display: inline-block;
+     margin-right: 40px;
+
+     margin-bottom: 50px;
+     margin-top: 50px;
+ }
+ /**
+  * подгоняем размер чекбокса/радиокнопки под картинку,
+  * обнуляем отступы, вешаем поверх всего и скрываем
+  */
+ .checkbox input[type="checkbox"]
+ {
+     position: absolute;
+     width: 25px;
+     height: 24px;
+     overflow: hidden;
+     margin: 5px;
+     padding: 0;
+     border: 0;
+     outline: 0;
+     opacity: 0;
+ }
+ /**
+  * Освобождаем место под картинку
+  */
+ .checkbox input[type="checkbox"] + label
+ {
+     position: relative;
+     padding-left: 40px;
+     display: block;
+     cursor: pointer;
+     padding-top: 2px;
+ }
+ /**
+  * Вставляем пустой блок с картинкой
+  */
+ .checkbox input[type="checkbox"] + label:before
+ {
+     display: block;
+     width: 25px;
+     height: 24px;
+     background: url('../img/spritesheet.png');
+     content: " ";
+     vertical-align: middle;
+     position: absolute;
+     left: 0;
+     top: 0;
+ }
+ /**
+  * Позиционируем фоновую картинку в
+  * зависимости от состояния контролла
+  */
+ .checkbox input[type="checkbox"] + label:before {
+     background-position: -5px -5px;
+ }
+ .checkbox input[type="checkbox"]:checked + label:before {
+     background-position: -40px -5px;
+ }
+
+
+ form
+ {   margin-left: auto;
+     margin-right: auto;
+     margin-top: 0;
+     height: auto;
+     width: 83%;
+     background-color: #f5f6f7;
+
+ }
+
+ input
+ {
+     margin: 40px 40px 40px 40px;
+ }
+
+ #form span{
+     font-family: Quicksand;
+     font-weight: bold;
+     font-size: 18px;
+     font-size: 15px;
+     margin-left: -20px;
+     margin-top: 40px;
+     margin-bottom: 40px;
+ }
+/*Кнопка*/
+ .see-all
+ {
+     font-family: Quicksand, serif;
+     font-weight: 700;
+     color: #ebebeb;
+     text-decoration: none;
+     text-align: center;
+     padding: 10px 17px;
+     border-radius: 3px;
+     background: #aa9b77;
+     box-shadow: 0 -3px #aa9b79 inset;
+     transition: 0.2s;
+
+
+
+
+     float: right;
+     margin-top: 38px;
+     margin-bottom: 30px;
+ }
+  button:hover { background: gold  ; }
+  button:active {
+    background: gold;
+    box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+ .clearfix:after {
+     content: ".";
+     visibility: hidden;
+     display: block;
+     height: 0;
+     clear: both;
+ }
+
+  /*MAIN SECTION*/
+
+ main
+ {   margin-left: auto;
+     margin-right: auto;
+     margin-top: 0;
+     background-color: #ffffff;
+     height: auto;
+     width: 83%;
+ }
+ .slider-section h1{
+     margin-top: 82px;
+     float: left;
+     color: #424242;
+     font-family: Quicksand;
+     font-size: 18px;
+     font-weight: bold;
+
+
+ }
+
+ .slider-section{
+     width: 90% ; margin: 0 auto;
+ }
+ #section-children{
+     display: none;
+ }
+
+
+ u            {cursor: pointer}
+ #men         {width: 100%;  height: 400px; display: inline-block;
+               overflow: hidden; position: relative}
+ #men article.slider-item { background-color: #f5f6f7 ; width: 330px; height: 380px;  display: inline-block;
+     text-align: center; line-height: 0px;}
+
+ #women         {width: 100%;  height: 400px; display: inline-block;
+     overflow: hidden; position: relative}
+ #women article.slider-item { background-color: #f5f6f7 ; width: 330px; height: 380px;  display: inline-block;
+     text-align: center; line-height: 0px;}
+
+ #children         {width: 100%;  height: 400px; display: inline-block;
+     overflow: hidden; position: relative}
+ #children article.slider-item { background-color: #f5f6f7 ; width: 330px; height: 380px;  display: inline-block;
+     text-align: center; line-height: 0px;}
+
+.slider-item h1{
+    font-size: 18px;
+    font-family: Quicksand;
+    margin-top: 12%;
+    margin-left: 5%;
+    float: left;
+    color: #aa9b77;
+
+}
+.slider-item span{
+    font-size: 22px;
+    float: right;
+    margin-right: 5%;
+    margin-top: 12%;
+
+}
+
+ article.slider-item div{
+     margin-left: auto;
+     margin-right: auto;
+     height: 235px;
+     margin-top: 25%;
+
+     vertical-align: middle;
+
+ }
+ article.slider-item select{
+     margin-left: 7%;
+     margin-top: 7%;
+     background: none;
+     border: 0;
+     border-radius: 0;
+     text-align: center;
+     float: left;
+     font-family: Quicksand;
+     font-size: 18px;
+
+ }
+
+ .slider-section span.nav:active{
+     color: gold;
+ }
+ .slider-section span.nav{
+     font-size: 16px;
+     font-weight: bold;
+     color: #aa9b77;
+     cursor: pointer
+ }
+     /*НЕ РАБОТАЕТ ТАК КАК ПРОПИСАНО КАЖДОМУ*/
+ .adaptive-block{
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 0;
+     width: 83%;
+     max-width: 1280px;
+    /* min-width: 1210px; */
+ }
+
+ /*ABOUT SECTION*/
+
+ #about-section{
+     background-color: #aa9b77;
+     height: auto;
+     padding-top: 75px;
+     padding-bottom: 75px;
+ }
+ #about-section div{
+     width: 510px;
+     padding: 60px 90px 50px 60px;
+     margin: 0 auto;
+     height: auto;
+     border: solid 3px #918363;
+ }
+#about-section p{
+    width: 40%;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+#about-section  pre{
+    font-family: Quicksand;
+    color: #424242;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#p-relative{
+    margin: 0 auto;
+
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 20px;
+    font-weight: 600;
+    color: #837659;
+
+}
+
+ /*FOOTER*/
+
+ /*ALL ELEMENTS*/
+ footer
+ {
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 0;
+
+     background-color: #424242;
+
+     height: 360px;
+     width: 83%;
+     border:1px;
+
+ }
+
+ .flex-block
+ {
+    display: flex;
+    flex-direction: row;
+
+ }
+
+ .flex-item
+ {
+    flex: 1;
+ }
+
+/*RIGHT SIDE*/
+.right-foot-section{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5.1%;
+
+}
+
+.right-foot-section ul
+{
+    font-size: 15px;
+    color: white;
+
+}
+
+.right-foot-section li
+{
+    cursor: pointer;
+    font-family: Quicksand;
+    font-size: 15px;
+    color: #ebebeb;
+
+}
+
+
+/*LEFT SIDE*/
+ .left-foot-section{
+     margin-top: auto;
+     margin-bottom: auto;
+     margin-left: 5.1%;
+ }
+
+ .left-foot-section h1
+ {   font-family: Quicksand;
+     font-size: 30px;
+     text-align: left;
+     color: white;
+ }
+
+ .left-foot-section p
+ {
+     font-family: Quicksand ;
+     font-size: 15px;
+     text-align: left;
+     color: #ebebeb;
+     text-transform: uppercase;
+     word-wrap: normal
+ }
+
+    .cart-button{
+
+        display: none;
+        position: absolute; margin-top: -295px; margin-left: 203px;
+        background:#aa9b77;
+        width:95px;
+        padding: 0px;
+        height: 30px;
+        font-family: Quicksand ;
+        font-weight: 700;
+        color: white;
+        font-size: 12px;
+
+}
+    .slider-item:hover{
+        border: 6px solid #aa9b77;
+        box-sizing: border-box;
+    }
+
+    .slider-item:hover .cart-button{
+        display:block;
+        cursor: pointer;
+        transition: all 2s ease;
+}
+
+
+
+ .shopping_list {
+     width: 100%;
+     margin-top: 10px;
+     border-collapse: collapse;
+ }
+ .shopping_list td,
+ .shopping_list th {
+     text-align: center;
+     padding: 10px;
+     border: none;
+ }
+
+
+
+ /* The Modal (background) */
+ .modal {
+     display: none; /* Hidden by default */
+     position: fixed; /* Stay in place */
+     z-index: 1; /* Sit on top */
+     padding-top: 100px; /* Location of the box */
+     left: 0;
+     top: 0;
+     width: 100%; /* Full width */
+     height: 100%; /* Full height */
+     overflow: auto; /* Enable scroll if needed */
+     background-color: rgb(0,0,0); /* Fallback color */
+     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+
+ /* Modal Content */
+ .modal-content {
+     position: relative;
+     background-color: #fefefe;
+     margin: auto;
+     padding: 0;
+     border: 1px solid #888;
+     min-width: 850px;
+     width: 50%;
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+     -webkit-animation-name: animatetop;
+     -webkit-animation-duration: 0.4s;
+     animation-name: animatetop;
+     animation-duration: 0.4s
+ }
+
+ /* Add Animation */
+ @-webkit-keyframes animatetop {
+     from {top:-300px; opacity:0}
+     to {top:0; opacity:1}
+ }
+
+ @keyframes animatetop {
+     from {top:-300px; opacity:0}
+     to {top:0; opacity:1}
+ }
+
+ /* The Close Button */
+ .close {
+     color: white;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+ }
+
+ .close:hover,
+ .close:focus {
+     color: #000;
+     text-decoration: none;
+     cursor: pointer;
+ }
+
+ .modal-header {
+     padding: 2px 16px;
+     background-color: #535253;
+     color: white;
+ }
+
+ .modal-body {padding: 2px 16px;}
+
+ .modal-footer {
+     padding: 2px 16px;
+     background-color: #aa9b77;
+     color: white;
+ }
+
+
+
+
+
+.main-cart-button{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline;
+    margin-left: 0%;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 3px;
+    background: #aa9b77;
+    box-shadow: 0 -3px #aa9b79 inset;
+    transition: 0.2s;
+}
+
+
+
+
+
+
+
+ @media all and (max-width : 1200px){
+
+ }
+
+/* Адаптация под меньше/равно 960px */
+@media all and (max-width : 960px)
+{
+    .adaptive-block
+    {
+
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+
+    }
+    header
+    {
+
+        width: 100%;
+
+    }
+    span{
+        font-size: 15px;}
+
+    .flex-block
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-foot-section h1
+    {
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+
+}
+/* Адаптация под меньше/равно 1024px */
+@media only screen and (max-width : 1024px) {
+
+    body{
+
+    }
+
+     .adaptive-block
+     {
+
+         width: 100%;
+         margin-left: 0;
+         margin-right: 0;
+         margin-top: 0;
+
+     }
+    header
+    {
+
+        width: 100%;
+
+    }
+    span{
+        font-size: 25px;}
+
+    /*FOOTER*/
+
+    /*ALL ELEMENTS*/
+
+    .flex-block
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-foot-section h1
+    {
+
+        font-size: 25px;
+        text-align: center;
+
+    }
+
+    .left-foot-section{
+        margin-left: 0;
+    }
+
+    .left-foot-section p
+    {
+        font-size: 20px;
+
+    }
+
+}
+
+/* NOT FLEX!*/
+
+/*Адаптация под смартфон портрет*/
+@media only screen and (min-device-width : 300px) and (max-device-width : 480px)
+{
+
+
+
+    .modal-content{
+        width: 100%;
+    }
+    .adaptive-block
+    {
+
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+
+    }
+    header
+    {
+
+        width: 100%;
+
+    }
+    span{
+        font-size: 35px;
+    }
+
+    .flex-block
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-foot-section{
+        margin-left: 0%;
+    }
+
+    .left-foot-section h1
+    {
+        font-size: 25px;
+        text-align: center;
+
+    }
+
+    .left-foot-section p
+    {
+        font-size: 20px;
+
+    }
+
+
+    #men         {width: 100%;  height: 400px; display: inline-block;
+        overflow: hidden; position: relative}
+    #men article.slider-item { background-color: #f5f6f7 ; width: 297px; height: 380px;  display: inline-block;
+        text-align: center; line-height: 0px;}
+
+    #women         {width: 100%;  height: 400px; display: inline-block;
+        overflow: hidden; position: relative}
+    #women article.slider-item { background-color: #f5f6f7 ; width: 297px; height: 380px;  display: inline-block;
+        text-align: center; line-height: 0px;}
+
+    #children         {width: 100%;  height: 400px; display: inline-block;
+        overflow: hidden; position: relative}
+    #children article.slider-item { background-color: #f5f6f7 ; width: 297px; height: 380px;  display: inline-block;
+        text-align: center; line-height: 0px;}
+
+    .cart-button{
+
+        display: none;
+        position: absolute; margin-top: -295px; margin-left: 180px;
+        background:#aa9b77;
+        width:95px;
+        padding: 0px;
+        height: 30px;
+        font-family: Quicksand ;
+        font-weight: 700;
+        color: white;
+        font-size: 12px;
+
+    }
+
+    #clear{
+        margin-left: 69%;
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        min-width: 400px;
+        width: auto;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+    #clear{
+        margin-left: 2%;
+    }
+
+}
+
+
+/*Адаптация под смартфон ландшафт*/
+@media only screen and (min-device-width : 500px) and (max-device-width : 720px)
+{
+    .adaptive-block
+    {
+
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+
+    }
+    header
+    {
+
+        width: 100%;
+
+    }
+    span{
+        font-size: 10px;
+    }
+
+    .flex-block
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-foot-section h1
+    {
+        margin-left: 0;
+        font-size: 30px;
+        text-align: center;
+
+    }
+}
+

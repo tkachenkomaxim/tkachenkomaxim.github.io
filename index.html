@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width">
+    <meta name="viewport" content="user-scalable=no">
+    <title>Lorem ipsum dolor</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/minstyle.css">
+    <link rel="script" href="js/minscripts.js">
+
+
+</head>
+<body>
+<header class="main-header adaptive-block">
+
+    <img src="img/logo.png" id="logo">
+    <img src="img/shoppingcart.svg" class="shop-cart" onclick="showCart()">
+    <ul>
+        <li>Home</li>
+        <li>Products</li>
+    </ul>
+    <h1>Our clothing , your comfort</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</br>
+              do eiusmod tempor incididunt ut labore et dolore</br>
+                            magna aliqua.</p>
+
+    <a id="down" href="#form"><img src="img/down.png"></a>
+
+</header>
+
+<form id="form" class="adaptive-block">
+<div style="width: 90%; margin: 0 auto;">
+    <div class="checkbox">
+        <input type="checkbox" id="men-check" hidden onclick="onMenCheck()"/>
+        <label for="men-check">MEN</label>
+    </div>
+    <div class="checkbox">
+    <input type="checkbox" id="women-check"  hidden onclick="onWomenCheck()"/>
+    <label for="women-check">WOMEN</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="children-check" checked hidden onclick="onChildrenCheck()" />
+        <label for="children-check">CHILDREN</label>
+    </div>
+   <button class="see-all clearfix" onclick="ShowAll()">SEE ALL PRODUCTS</button>
+
+</div>
+</form>
+
+<main class="adaptive-block" style="">
+
+    <section id = 'section-men' class="slider-section">
+        <h1>MEN </h1>
+        <hr style="height: 2px; width: 88%; border: none;
+        color: #cccccc;background-color: #cccccc; float: right; margin-top: 90px; margin-bottom: -25px ">
+        <span class="nav" onclick=" SliderFuncM(0,0)" style="margin-top: 150px;
+        margin-right: -86%; margin-bottom: 16px; float: right;">
+            ⮜
+        </span>
+        <span class="nav" onclick= " SliderFuncM(1,0)" style="margin-top: 150px; margin-bottom: 16px;
+         margin-right: -88%; float: right; ">
+           ⮞
+        </span>
+
+        <div id="men">
+
+
+            <article id ="1" class = "slider-item">
+                <select>
+                    <option selected disabled>SIZE</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                </select>
+               <div>
+                   <img src="img/pants.png">
+               </div>
+                <button class="cart-button" data-id="1" onclick="AddToCart(this)" >
+                    ADD TO CART
+                </button>
+                <h1 class="item-title">
+                    PANTS FORCLAZ
+                </h1><span class="item-price">
+                    30,00€
+                </span>
+            </article>
+
+
+
+            <article id ="2" class="slider-item">
+                <select>
+                    <option selected disabled>SIZE</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                </select>
+                <div>
+                    <img src="img/backpack.png">
+                </div>
+                <button class="cart-button" data-id="2" onclick="AddToCart(this)" >
+                    ADD TO CART
+                </button>
+                <h1 class="item-title">
+                    BACKPACK
+                </h1>
+                <span class="item-price">
+                    60,00€
+                </span>
+            </article>
+
+
+
+            <article id ="3" class="slider-item">
+                <select>
+                    <option selected disabled>SIZE</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                </select>
+               <div>
+                   <img src="img/polo1.png">
+               </div>
+                <button class="cart-button" data-id="3" onclick="AddToCart(this)" >
+                    ADD TO CART
+                </button>
+                <h1 class="item-title">
+                    T-SHIRT
+                </h1>
+                <span class="item-price">
+                    5,00€
+                </span>
+            </article>
+
+
+
+            <article id ="4" class="slider-item">
+                <select>
+                    <option selected disabled>SIZE</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                </select>
+               <div>
+                   <img src="img/polo1.png">
+               </div>
+                <button class="cart-button" data-id="4" onclick="AddToCart(this)" >
+                    ADD TO CART
+                </button>
+                <h1 class="item-title">
+                    T-SHIRT
+                </h1>
+                <span class="item-price">
+                    5,00€
+                </span>
+            </article>
+
+
+        </div>
+
+    </section>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Your shop cart</h2>
+            </div>
+            <div id="show-cart-main" class="modal-body">
+                <p>Your shop cart is empty!</p>
+            </div>
+            <div class="modal-footer">
+
+
+                <button id="clear" class="main-cart-button" style=" margin-top: 15px; margin-bottom: 7px;" onclick="Clear()">
+                    CLEAR CART
+                </button>
+                <button class="main-cart-button" style="margin-left: 2%; margin-top: 15px; margin-bottom: 7px;">
+                    CHECKOUT
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <section id ="section-women" class="slider-section" >
+
+
+        <h1>WOMEN</h1>
+        <hr style="height: 2px; width: 88%; border: none;
+        color: #cccccc;background-color: #cccccc; float: right; margin-top: 90px; margin-bottom: -25px ">
+        <span class="nav" onclick=" SliderFunc(0,1)" style="margin-top: 150px;
+                                         margin-right: -86%; margin-bottom: 16px; float: right; ">
+            ⮜
+        </span>
+        <span class="nav" onclick= " SliderFunc(1,1)" style="margin-top: 150px;
+         margin-right: -88%; margin-bottom: 16px; float: right;">
+           ⮞
+        </span>
+
+           <div id="women" style="width: 100%; ">
+               <article id = "5" class = "slider-item">
+                   <select>
+                       <option selected disabled>SIZE</option>
+                       <option>S</option>
+                       <option>M</option>
+                       <option>L</option>
+                   </select>
+                   <div >
+                       <img src="img/giacket.png" >
+                      </div>
+                   <button class="cart-button" data-id="5" onclick="AddToCart(this)">
+                       ADD TO CART
+                   </button>
+
+                   <h1 class="item-title">
+                       GIACKET
+                   </h1>
+                   <span class="item-price">
+                       60,00€
+                   </span>
+               </article>
+
+               <article id="6" class="slider-item">
+                   <select>
+                       <option selected disabled>SIZE</option>
+                       <option>S</option>
+                       <option>M</option>
+                       <option>L</option>
+                   </select>
+                   <div>
+                       <img src="img/trekking.png">
+                   </div>
+                   <button class="cart-button" data-id="6" onclick="AddToCart(this)">
+                       ADD TO CART
+                   </button>
+                   <h1 class="item-title">
+                       TREKKING SHOES
+                   </h1>
+                   <span class="item-price">
+                       80,00€
+                   </span>
+               </article>
+
+               <article id="7" class="slider-item">
+                   <select>
+                       <option selected disabled>SIZE</option>
+                       <option>S</option>
+                       <option>M</option>
+                       <option>L</option>
+                   </select>
+                   <div>
+                       <img src="img/polo2.png">
+                   </div>
+                   <button class="cart-button" data-id="7" onclick="AddToCart(this)">
+                       ADD TO CART
+                   </button>
+                   <h1 class="item-title">
+                       T-SHIRT
+                   </h1>
+                   <span class="item-price">
+                       5,00€
+                   </span>
+               </article>
+
+               <article id="8" class="slider-item">
+                   <select>
+                       <option selected disabled>SIZE</option>
+                       <option>S</option>
+                       <option>M</option>
+                       <option>L</option>
+                   </select>
+                   <div>
+                       <img src="img/polo2.png">
+                   </div>
+                   <button class="cart-button" data-id="8" onclick="AddToCart(this)">
+                       ADD TO CART
+                   </button>
+                   <h1 class="item-title">
+                       T-SHIRT
+                   </h1>
+                   <span class="item-price">
+                       5,00€
+                   </span>
+               </article>
+           </div>
+
+       </section>
+
+    <section id="section-children" class="slider-section" >
+
+
+        <h1>CHILDREN</h1>
+        <hr style="height: 2px; width: 85%; border: none;
+        color: #cccccc;background-color: #cccccc; float: right; margin-top: 90px; margin-bottom: -25px ">
+        <span class="nav" onclick=" SliderFuncC(0)" style="margin-top: 150px;
+                                         margin-right: -83%; margin-bottom: 16px; float: right; ">
+            ⮜
+        </span>
+        <span class="nav" onclick= " SliderFuncC(1)" style="margin-top: 150px;
+         margin-right: -85%; margin-bottom: 16px; float: right;">
+           ⮞
+        </span>
+
+        <div id="children" style="width: 100%; ">
+            <article id = "9" class = "slider-item">
+                <select>
+                    <option selected disabled>SIZE</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                </select>
+                <div >
+                    <img src="img/giacket.png" >
+                </div>
+                <button class="cart-button" data-id="9" onclick="AddToCart(this)">
+                    ADD TO CART
+                </button>
+
+                <h1 class="item-title">
+                    GIACKET
+                </h1>
+                <span class="item-price">
+                       60,00€
+                   </span>
+            </article>
+
+            <article id="10" class="slider-item">
+                <select>
+                    <option selected disabled>SIZE</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                </select>
+                <div>
+                    <img src="img/trekking.png">
+                </div>
+                <button class="cart-button" data-id="10" onclick="AddToCart(this)">
+                    ADD TO CART
+                </button>
+                <h1 class="item-title">
+                    TREKKING SHOES
+                </h1>
+                <span class="item-price">
+                       80,00€
+                   </span>
+            </article>
+
+            <article id="11" class="slider-item">
+                <select>
+                    <option selected disabled>SIZE</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                </select>
+                <div>
+                    <img src="img/polo2.png">
+                </div>
+                <button class="cart-button" data-id="11" onclick="AddToCart(this)">
+                    ADD TO CART
+                </button>
+                <h1 class="item-title">
+                    T-SHIRT
+                </h1>
+                <span class="item-price">
+                       5,00€
+                   </span>
+            </article>
+
+            <article id="12" class="slider-item">
+                <select>
+                    <option selected disabled>SIZE</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                </select>
+                <div>
+                    <img src="img/polo2.png">
+                </div>
+                <button class="cart-button" data-id="12" onclick="AddToCart(this)">
+                    ADD TO CART
+                </button>
+                <h1 class="item-title">
+                    T-SHIRT
+                </h1>
+                <span class="item-price">
+                       5,00€
+                   </span>
+            </article>
+        </div>
+
+    </section>
+
+
+   </main>
+
+   <section class="adaptive-block" id="about-section">
+       <p id="p-relative" style="z-index: 0; position: relative; top: 10px; width: 130px; background-color: #aa9b77">ABOUT US</p>
+       <div style="z-index: 1">
+          <p>
+           <pre>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+  do eiusmod tempor incididunt ut labore et dolore magna
+           aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation
+           </pre>
+           </p>
+       </div>
+
+   </section>
+
+   <footer class="adaptive-block flex-block">
+
+       <section class="left-foot-section flex-item">
+           <h1> TREKKING </h1>
+           <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing</br>
+               elit, sed do eiusmod tempor incididunt ut labore et</br>
+               dolore magna aliqua. Ut enim ad minim veniam, quis</br>
+               nostrud exercitation ullamco laboris nisi ut aliquip</br>
+               ex ea commodo consequat.
+           </p>
+       </section>
+
+       <section class="right-foot-section flex-item">
+           <ul>
+               <li>
+                   CREDITS
+               </li>|<li>
+                   PRIVACY
+               </li>|<li>
+                   ABOUT
+               </li>|<li>
+                   CONTACT
+               </li>
+           </ul>
+
+       </section>
+
+   </footer>
+
+
+<script src="js/minscripts.js"></script>
+
+
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+
+   <script>
+
+
+
+   </script>
+
+   </body>
+   </html>
